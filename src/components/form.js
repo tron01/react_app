@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-function Myform() {
+function Form({ onFormSubmit }) {
     const [age, setage] = useState(" ");
 
     const onSubmit = (e) => {
         e.preventDefault();
+        onFormSubmit(age);
     }
+    let b = age;
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -18,11 +20,11 @@ function Myform() {
 
                     </div>
                     <br />
-                    <span>Age: { }</span>
+                    <span>Age: {b}</span>
                 </div>
             </form>
 
         </div>
     );
 }
-export default Myform;
+export default Form;
