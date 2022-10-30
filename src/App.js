@@ -1,5 +1,6 @@
 import Card from './components/card';
 import Form from './components/form';
+import List from './components/list';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Card />
       <Form onFormSubmit={onFormSubmit} />
+      <List />
     </div>
   );
 }
