@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Form({ onFormSubmit }) {
     const [age, setage] = useState(" ");
+    console.log("render!");
 
+    useEffect(() => {
+        console.log("onMount");
+    }, [setage]);
     const onSubmit = (e) => {
         e.preventDefault();
         onFormSubmit(age);
