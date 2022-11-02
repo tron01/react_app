@@ -5,7 +5,7 @@ import List from './components/list';
 
 function App() {
   const onFormSubmit = (a) => {
-    console.log(a);
+
   }
   return (
     <div>
